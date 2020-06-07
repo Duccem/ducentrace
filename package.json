@@ -1,0 +1,40 @@
+{
+	"name": "ducentrace",
+	"version": "1.0.0",
+	"description": "Middleware to express, to log the request and response data",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
+	"scripts": {
+		"test": "jest --config jest.config.js",
+		"build": "tsc -p tsconfig.json"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Duccem/ducentrace.git"
+	},
+	"keywords": [
+		"Express",
+		"Middleware",
+		"Logger",
+		"Request",
+		"Response",
+		"Http"
+	],
+	"author": "duccem29",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/Duccem/ducentrace/issues"
+	},
+	"homepage": "https://github.com/Duccem/ducentrace#readme",
+	"devDependencies": {
+		"@types/jest": "^25.2.3",
+		"@types/on-headers": "^1.0.0",
+		"jest": "^26.0.1",
+		"ts-jest": "^26.1.0",
+		"typescript": "^3.9.5"
+	},
+	"dependencies": {
+		"ducenlogger": "^1.2.1",
+		"on-headers": "^1.0.2"
+	}
+}
