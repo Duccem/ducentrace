@@ -1,11 +1,11 @@
-import { Ducenlogger } from 'ducenlogger';
+import { Logger } from 'ducenlogger';
 import onHeaders from 'on-headers';
 
 /**
  * Middleware that log the request and response that recive or send the server
  */
 export class NetLogger {
-	private static logger: Ducenlogger = new Ducenlogger();
+	private static logger: Logger = new Logger();
 
 	//-------------------------Request methods------------------------//
 	/**
