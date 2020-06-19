@@ -1,6 +1,6 @@
 {
 	"name": "ducentrace",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Middleware to express, to log the request and response data",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
