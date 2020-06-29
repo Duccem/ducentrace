@@ -100,6 +100,7 @@ export class NetLogger {
 	 */
 	private static responseTime(digits: number, request: any, response: any): string {
 		digits = digits || 3;
+		if (!response._startTime) response._startTime = process.hrtime();
 		const elapsedTimeInMs = ((response._startTime[0] - request._startTime[0]) * 1e3 + (response._startTime[1] - request._startTime[1]) / 1e6).toFixed(digits);
 		return elapsedTimeInMs;
 	}
@@ -132,10 +133,10 @@ export class NetLogger {
 	 * @param response
 	 */
 	public static Response(request: any, response: any): void {
+		let time = this.responseTime(3, request, response);
 		let url = this.url(request);
 		let status = this.status(response);
 		let lenght = this.lenght(response);
-		let time = this.responseTime(3, request, response);
 		let ip = this.ip(request);
 		let log = `Responsed to ${url} requested by ${ip} with status ${status} (${lenght}) bytes in ${time} miliseconds`;
 		this.logger.log(log, { type: 'response', color: 'success' });
